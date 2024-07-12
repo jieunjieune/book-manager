@@ -11,7 +11,7 @@ public class Application {
         BookController controller = new BookController();
 
         while(true) {
-            System.out.println("============== 도서 관리 프로그램 ==============");
+            System.out.println("============== 도서 관리 프로그램 ===============");
             System.out.println("1. 도서 추가");
             System.out.println("2. 도서 조회");
             System.out.println("3. 도서 수정");
@@ -30,19 +30,16 @@ public class Application {
                     String title;
                     String author;
                     for (int i = 0; i < addNum; i++) {
-                        System.out.print("책 제목: ");
-                        title = sc.nextLine();
+                        System.out.print("도서명: ");
                         sc.nextLine();
-                        System.out.print("책 저자: ");
+                        title = sc.nextLine();
+                        System.out.print("저자: ");
                         author = sc.nextLine();
                         System.out.print("ISBN 등록번호: ");
                         int isbn = sc.nextInt();
                         System.out.print("해외 서적 여부(true/false): ");
                         boolean isForeignBook = sc.nextBoolean();
                         controller.addBook(title, author, isbn, isForeignBook);
-
-                        books[i] = new Book(title, author, isbn, isForeignBook);
-                        System.out.println("===== 책 " + (i + 1) + "권이 등록되었습니다. =====");
                     }
                     break;
 
@@ -50,7 +47,6 @@ public class Application {
                     System.out.println("---------------- 도서 조회 방법 ------------------");
                     System.out.println("1. 도서 목록 전체 조회");
                     System.out.println("2. isbn 번호로 조회");
-
                     System.out.print("===> 조회 방법 선택 : ");
                     int searchNum = sc.nextInt();
 
@@ -61,7 +57,7 @@ public class Application {
                         case 2:
                             System.out.print("===> 찾는 도서의 isbn 번호: ");
                             int isbn = sc.nextInt();
-                            System.out.println(".......... isbn " + isbn +"번 도서의 정보 ..........");
+                            System.out.println("............ isbn " + isbn +"번 도서의 정보 ............");
                             controller.getBook(isbn);
                             break;
                         default:

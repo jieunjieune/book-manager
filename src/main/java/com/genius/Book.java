@@ -7,8 +7,6 @@ public class Book {
     private int isbn;
     private boolean isForeignBook;
 
-    public Book() {
-    }
 
     public Book(String title, String author, int isbn, boolean isForeignBook) {
         this.title = title;

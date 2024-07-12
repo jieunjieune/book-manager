@@ -17,13 +17,9 @@ public class BookView {
 
     // 도서 목록 출력
     public void displayBookList(List<Book> books) {
-        System.out.println(".................. 전체 도서 목록 ..................");
+        System.out.println("...............( 전체 도서 목록 ).................");
         for (Book book : books) {
-            if (book != null) {
                 System.out.println(book);
-            } else {
-                System.out.println("등록된 도서가 없습니다.");
-            }
         }
     }
 

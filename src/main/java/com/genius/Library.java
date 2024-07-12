@@ -21,10 +21,8 @@ public class Library {
 
     public void updateBook(int isbn, String title, String author) {
         Book book = getBook(isbn);
-        if (book != null) {
-            book.setTitle(title);
-            book.setAuthor(author);
-        }
+        book.setTitle(title);
+        book.setAuthor(author);
     }
 
     public void deleteBook(int isbn) {
